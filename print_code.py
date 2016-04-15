@@ -7,7 +7,12 @@ with open('test.py', 'rb') as f:
         code = code_obj.co_code
     except AttributeError:
         sys.exit("Code is not found in test.py file.")
-
+    else:
+        print('co_consts:', code_obj.co_consts)
+        print('co_names:', code_obj.co_names)
+        print('co_varnames', code_obj.co_varnames)
+        print('co_freevars', code_obj.co_freevars)
+        print('co_cellvars', code_obj.co_cellvars)
 i = 0
 n = len(code)
 while i < n:
